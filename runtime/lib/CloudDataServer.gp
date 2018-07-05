@@ -55,7 +55,7 @@ method collectUserNames CloudDataServer {
 
 method handleMessage CloudDataServer msg connection {
   cmd = (command msg)
-//  print (dateString) cmd (remoteAddress (socket connection))
+  print (dateString) cmd (remoteAddress (socket connection))
   if ('get' == cmd) {
     response = (handleGet this msg)
   } ('put' == cmd) {
